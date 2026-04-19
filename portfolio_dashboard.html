@@ -903,7 +903,13 @@ function closeConfirm() { document.getElementById('confirmWrap').classList.remov
 
 // ─── INIT ───
 const saved = localStorage.getItem('pf_sheet_url');
-if (saved) { document.getElementById('sheet-url').value = saved; }
+if (saved) {
+  sheetUrl = saved;
+  isSample = false;
+  startApp();
+} else {
+  document.getElementById('sheet-url').value = '';
+}
 </script>
 </body>
 </html>
