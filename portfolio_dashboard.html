@@ -508,7 +508,7 @@ function deriveAccounts() {
 
 async function fetchFX() {
   try {
-    const res = await fetch('https://api.frankfurter.app/latest?base=USD&symbols=KRW,JPY,EUR,CNY');
+    const res = await fetch('https://api.frankfurter.dev/v1/latest?base=USD&symbols=KRW,JPY,EUR,CNY');
     const d = await res.json();
     if (d.rates) {
       fxRates.USD = Math.round(d.rates.KRW);
